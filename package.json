@@ -4,23 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "npm run build:css & npm run build:js",
-    "build:js": "webpack -p",
-    "build:css": "node-sass src/styles/site.scss -o dist && cleancss -o dist/site.min.css dist/site.css",
+    "build": "webpack -p",
     "watch": "webpack --watch",
-    "watch:css": "node-sass --watch src/styles/site.scss -o dist",
-    "clean": "rimraf dist"
+    "start": "live-server ./www"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/droopytersen/finallysmetanas.git"
+    "url": "git+https://github.com/droopytersen/utterance-builder.git"
   },
   "author": "Andrew Petersen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/droopytersen/finallysmetanas/issues"
-  },
-  "homepage": "https://github.com/droopytersen/finallysmetanas#readme",
   "dependencies": {
     "alexa-utterances": "^0.2.1",
     "es6-promise": "^4.0.5"
