@@ -1,4 +1,33 @@
-body { text-align: center; }
+body { 
+    text-align: center; 
+}
+#main-content {
+    width: 1100px;
+    margin: 0 auto;
+}
+.container {
+    padding:10px;
+}
+.left-zone textarea {
+    width: 100%;
+}
 .cheatsheet { 
     text-align: left;
+}
+.cheatsheet .container > div {
+    border:1px solid #eee;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f7f7f7;
+}
+
+.cheatsheet h4, .cheatsheet h5{
+    margin: 10px 0;
+}
+
+.cheatsheet pre {
+    /*width: 100%;*/
+    background:#fff;
+    border:1px solid #aaa;
+    padding: 0 10px;
 }

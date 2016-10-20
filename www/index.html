@@ -5,53 +5,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-        <link rel='styleshee' href='site.css'>
+        <link rel='stylesheet' href='site.css'>
     </head>
     <body>
-        <header>
-            <h1 class='pure-u-3-3'>Amazon Alexa Skill Utterance Builder</h1>
-            <h4><a target='_blank' href='https://github.com/mreinstein/alexa-utterances'>Powered by alexa-utterances</a></h4>
-        </header>
-        <div class='main pure-g'>
-            <section class='left-zone pure-u-2-3'>
-                <h2>Workspace</h2>
-                <div id='workspace'>
-                    <form class="pure-form">
-                        <fieldset>
-                            <legend></legend>
-                            <textarea placeholder="give me the {stock|} price {of|for} {-|COMPANY}" autofocus cols=80 rows=10 ></textarea>
-                            <br/><br/>
-                            <button type="submit" class="pure-button pure-button-primary button-xlarge">Run</button>
-                        </fieldset>
-                    </form>
-                </div>
-                <div id='utterance-output'>
-                    <form class="pure-form">
-                        <fieldset>
-                            <legend></legend>
-                            <textarea placeholder='Output...' cols=80 rows=15 ></textarea>
-                        </fieldset>
-                    </form>
-                </div>
-            </section>
-            <section class='right-zone cheatsheet  pure-u-1-3'>
-                <h2>Cheatsheet</h2>
-                <div>
-                    <h4>Generate Multiple Versions of Static Text</h4>
-                    <p>This lets you define multiple ways to say a phrase, but combined into a single sample utterance</P>
-<pre class='input'><code>
+        <div id='main-content'>
+
+            <header>
+                <h1 class='pure-u-2-2'>Amazon Alexa Skill Utterance Builder</h1>
+                <h4><a target='_blank' href='https://github.com/mreinstein/alexa-utterances'>Powered by alexa-utterances</a></h4>
+            </header>
+            <div class='main pure-g'>
+                <section class='left-zone pure-u-1-2'>
+                    <div class='container'>
+                        <h2>Workspace</h2>
+                        <div id='workspace'>
+                            <form class="pure-form">
+                                <fieldset>
+                                    <textarea autofocus placeholder="give me the {stock|} price {of|for} {-|COMPANY}" rows=10 >give me the {stock|} price {of|for} {-|COMPANY}</textarea>
+                                    <br/><br/>
+                                    <button type="submit" class="pure-button pure-button-primary button-xlarge">Run</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div id='utterance-output'>
+                            <form class="pure-form">
+                                <fieldset>
+                                    <textarea placeholder='Output...' rows=15 ></textarea>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class='right-zone cheatsheet  pure-u-1-2'>
+                    <div class='container'>
+                        <h2>Cheatsheet</h2>
+                        <div>
+                            <h4>Multiple Phrasing Options</h4>
+                            <p>This lets you define multiple ways to say a phrase, but combined into a single sample utterance</P>
+                            <h5>Template</h5>
+                            <pre class='input'><code>
 {what is the|what's the|check the} status
-</code></pre>
-                    <h5>Outputs</h5>
-<pre class='output'><code>
+                            </code></pre>
+                            
+                            <h5>Output</h5>
+                            <pre class='output'><code>
 what is the status
 what's the status
 check the status
-</code></pre>
-                </div>
+                            </code></pre>
+                        </div>
 
-            </section>
+                        <div>
+                            <h4>Optional Words</h4>
+                            <p>This lets you generate an utterance with and without the word</p>
+                            <h5>Template</h5>
+                            <pre class='input'><code>
+what is your {favorite |} color
+                            </code></pre>
+                            <h5>Output</h5>
+                            <pre class='output'><code>
+what is your color
+what is your favorite color
+                            </code></pre>
+                        </div>
 
+
+                        <div>
+                            <h4>Custom Slot Types</h4>
+                            <p>To work with Custom Slot Types registered in your interaction model, use a special syntax to leave a curly-braced slot name unparsed. 
+                            </P>
+                            <h5>Template</h5>
+                            <pre class='input'><code>
+give me the stock price of {-|COMPANY}
+                            </code></pre>
+                            
+                            <h5>Output</h5>
+                            <pre class='output'><code>
+give me the stock price of {COMPANY}
+                            </code></pre>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
         </div>
         <script src='bundle.js'></script>
     </body>
