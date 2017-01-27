@@ -1,7 +1,7 @@
 {
-  "name": "utterance-builder",
-  "version": "1.0.0",
-  "description": "",
+  "name": "utterance-builder-gui",
+  "version": "1.0.1",
+  "description": "Alexa Skill Utterance Builder GUI powered by alexa-utteranaces",
   "main": "server.js",
   "scripts": {
     "build": "webpack -p",
